@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Snoop",
+  "version": "0.0.1",
+  "description": "Peek into redditor's post history",
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/r/*/comments/*"],
+      "js": ["snoop.js"]
+    }
+  ]
+}
