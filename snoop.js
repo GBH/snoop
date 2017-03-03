@@ -46,15 +46,15 @@ function populate_snooped_history(xhr, snoop_span){
   // Sorting by most frequent subreddits
   let sorted_names = []
   for (let r in sub_names){
-    sorted_names.push([r, sub_names[r]])
+    sorted_names.push([r, sub_names[r]]);
   }
   sorted_names = sorted_names.sort(function(a,b){
-    return b[1] - a[1]
-  })
-  sorted_names = sorted_names.map(function(x){
-    return x[0]
+    return b[1] - a[1];
   });
-  sorted_names = sorted_names.slice(0, 5)
+  sorted_names = sorted_names.map(function(x){
+    return x[0];
+  });
+  sorted_names = sorted_names.slice(0, 5);
 
   // blanking and populating snoop span
   while (snoop_span.firstChild) {
